@@ -45,6 +45,19 @@
       "last 1 safari version"
     ]
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{json,md,scss,yaml,yml}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "devDependencies": {
     "@types/redux-logger": "^3.0.8",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
